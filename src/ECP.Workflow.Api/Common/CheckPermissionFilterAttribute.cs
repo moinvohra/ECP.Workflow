@@ -21,15 +21,18 @@ namespace ECP.Workflow.Common
         public override async Task OnActionExecutionAsync(ActionExecutingContext context, 
             ActionExecutionDelegate next)
         {
-            if (!await _authClient.
-                   HasPermissionAsync(Convert.ToString(context.HttpContext.Request.Headers["Authorization"]),
-                    context.ActionArguments["tenantid"].ToString(),
-                    context.ActionArguments["applicationid"].ToString(),
-                    _featureCode).ConfigureAwait(false))
-            {
-                context.Result = new ForbidResult();
-                return;
-            }
+            #region IdentityServerImplementaitionForPermissions
+            //if (!await _authClient.
+            //       HasPermissionAsync(Convert.ToString(context.HttpContext.Request.Headers["Authorization"]),
+            //        context.ActionArguments["tenantid"].ToString(),
+            //        context.ActionArguments["applicationid"].ToString(),
+            //        _featureCode).ConfigureAwait(false))
+            //{
+            //    context.Result = new ForbidResult();
+            //    return;
+            //}
+            #endregion
+
             await next();
         }
     }
