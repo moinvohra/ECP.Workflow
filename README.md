@@ -1,7 +1,5 @@
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/ed6ed32f4d6e4e8591da71b72b636555)](https://www.codacy.com)[![Bitbucket](https://s3.amazonaws.com/assets.coveralls.io/badges/coveralls_60.svg)](https://bitbucket.org) [![JavaScript Style Guide: Good Parts](https://img.shields.io/badge/code%20style-goodparts-brightgreen.svg?style=flat)](https://github.com/dwyl/goodparts "JavaScript The Good Parts")[
-![javascript](https://aleen42.github.io/badges/src/javascript.svg)](https://www.javascript.com/)[
-![CI](https://camo.githubusercontent.com/3bcf888ec2db200eba1422c065c25fe9b036a9fa/68747470733a2f2f63692e6170707665796f722e636f6d2f6170692f70726f6a656374732f7374617475732f3864736b626e393038653237766576782f6272616e63682f6d61737465723f7376673d74727565)](https://ci.appveyor.com/api/projects/status/8dskbn908e27vevx/branch/master?svg=true)
+
 # ASP.NET Core - ECP.Workflow.API!
 
 The project contains the APIs for creating the workflow of the company.
