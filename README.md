@@ -79,8 +79,7 @@ If you are using your local copy of the database then set your connection string
 
 
 ### Database
-Specify your database server with version and database name
-i.e. 
+
 Database Server: PostgreSQL
 Database Name: tsr_local
 
@@ -124,7 +123,7 @@ If you have EC2 instance or any VPS server then install below prerequistes softw
 Specify the version history
 |Version                |Descrption	|Other Description|
 |----------------|-------------------------------|-----------------------------|
-|1.0.0.0|First Version            | Other Description           |
+|1.0.0.0|First Version            | -           |
 
 ## License
 
