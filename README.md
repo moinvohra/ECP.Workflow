@@ -76,8 +76,7 @@ If you are using your local copy of the database then set your connection string
 - Serilog.Settings.Configuration
 - Serilog.Sinks.File
 - Swashbuckle.AspNetCore.Swagger
-- 
-Note: No need to mention default packages here
+
 
 ### Database
 Specify your database server with version and database name
