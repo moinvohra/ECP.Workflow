@@ -3,8 +3,6 @@ using ECP.Workflow.Model;
 using ECP.Workflow.Model.Utility;
 using ECP.Workflow.Service;
 using ECP.Workflow.Service.Validation;
-using IdentityServer4.AccessTokenValidation;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +10,6 @@ using System.Net;
 using System.Threading.Tasks;
 using ECP.KendoGridFilter;
 using static ECP.Workflow.Model.Utility.General;
-using ECP.Workflow.Repository.Query;
 
 namespace ECP.Workflow.Api.Controllers
 {
@@ -23,12 +20,12 @@ namespace ECP.Workflow.Api.Controllers
     {
         private readonly IWorkflowService _service;
 
-        private readonly IWorkflowSearchRepository _repository;
+        private readonly IWorkflowSearchService _workflowSearchService;
         public WorkflowsController(IWorkflowService service,
-            IWorkflowSearchRepository repository)
+            IWorkflowSearchService workflowSearchService)
         {
             _service = service;
-            _repository = repository;
+            _workflowSearchService = workflowSearchService;
         }
 
         /// <summary>
@@ -53,7 +50,7 @@ namespace ECP.Workflow.Api.Controllers
         {
             BaseResponse<List<WorkflowListRecord>> response = new BaseResponse<List<WorkflowListRecord>>();
 
-            DataSourceResult workflowData = await _repository.search(tenantId, applicationId, req);
+            DataSourceResult workflowData = await _workflowSearchService.search(tenantId, applicationId, req);
 
             response.ResponseCode = (int)HttpStatusCode.OK;
             response.TotalRecords = workflowData.Total;

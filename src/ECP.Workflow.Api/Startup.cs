@@ -1,5 +1,4 @@
 using System;
-using System.IO;
 using System.Net.Http;
 using System.Web;
 using Dapper;
@@ -33,7 +32,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using RabbitMQ.Client;
-using Serilog;
 
 namespace ECP.Workflow.Api
 {
@@ -144,6 +142,9 @@ namespace ECP.Workflow.Api
 
             services.AddTransient<IWorkflowRepository, WorkflowRepository>();
             services.AddTransient<IWorkflowService, WorkflowService>();
+            services.AddTransient<IWorkflowSearchService, WorkflowSearchService>();
+
+            //IWorkflowSearchService
 
 
             services.AddTransient<IWorkflowSearchRepository, WorkFlowSearchRepository>();

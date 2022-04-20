@@ -88,8 +88,8 @@ Database Name: tsr_local
  - ECP.Workflow.Services(Contains business   logic)
  - ECP.Workflow.Model(Contains view model)
  - ECP.Workflow.API
- - ECP.Workflow.EventPublisher (Contains code for the sending the message to MessageBroler)
- - ECP.Workflow.EventReceiver (Contains code for the Receiving the message from MessageBroler)
+ - ECP.Workflow.EventPublisher (Contains code for the sending the message to MessageBroker)
+ - ECP.Workflow.EventReceiver (Contains code for the Receiving the message from MessageBroker)
  - ECP.Messaging.RabbitMQ (Contains Message Broker services) 
  - ECP.Messages / ECP.Messaging.Abstraction (Contains the Message Brokers Libraries)
 
