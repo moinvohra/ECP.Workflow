@@ -1,0 +1,6 @@
+Jenkinsfile
+.svn/
+bin/
+obj/
+out/
+TestResults/

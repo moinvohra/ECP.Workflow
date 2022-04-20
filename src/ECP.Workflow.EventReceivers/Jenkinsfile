@@ -1,0 +1,32 @@
+#!/usr/bin/env groovy
+
+node{
+        def commons
+        currentBuild.result = "SUCCESS"
+        stage('Clean WS'){
+            echo "cleaning Workspace"
+            cleanWs()
+        }
+        stage('Clone Project'){
+        echo "Cloning Project"
+        checkout scm
+
+        }
+        stage('submodules'){
+            echo "initializing submodules"
+            sh "git submodule init && git submodule update"
+        }
+         stage('Get deployment-file'){
+             dir('deploymentfiles'){
+		checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'CleanBeforeCheckout']], submoduleCfg: [], userRemoteConfigs: [[url: 'git@bitbucket.org:dovetail-ecp/ecp.deployment.git']]])
+             }
+           }
+
+
+        load ("deploymentfiles/deployment/workflow/jenkinsfile-eventreceiver").stages()
+        stage('Clean WS'){
+            echo "cleaning Workspace"
+            cleanWs()
+        }
+}
+

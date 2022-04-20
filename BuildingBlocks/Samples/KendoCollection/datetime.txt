@@ -1,0 +1,25 @@
+{
+    "skip": 0,
+    "take": 12,
+    "sort": [
+        {
+            "field": "createdDate",
+            "dir": "desc"
+        }
+    ],
+    "filter": {
+        "logic": "and",
+        "filters": [
+            {
+                "field": "createdDate",
+                "operator": "gt",
+                "value": "2/18/2020"
+            },
+                {
+                "field": "createdDate",
+                "operator": "lt",
+                "value": "2/21/2020"
+            } 
+        ]
+    }
+}

@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Model\**" />
+    <Compile Remove="Utility\**" />
+    <EmbeddedResource Remove="Model\**" />
+    <EmbeddedResource Remove="Utility\**" />
+    <None Remove="Model\**" />
+    <None Remove="Utility\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.30" />
+    <PackageReference Include="FluentValidation" Version="8.6.2" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="8.6.2" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.1" />
+    <PackageReference Include="MongoDB.Bson" Version="2.10.2" />
+    <PackageReference Include="MongoDB.Driver" Version="2.10.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\BuildingBlocks\ECP.Messages\ECP.Messages.csproj" />
+    <ProjectReference Include="..\..\BuildingBlocks\ECP.Messaging.RabbitMQ\ECP.Messaging.RabbitMQ.csproj" />
+    <ProjectReference Include="..\ECP.Workflow.Model\ECP.Workflow.Model.csproj" />
+    <ProjectReference Include="..\ECP.Workflow.Repository\ECP.Workflow.Repository.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Service\TransactionQueueOutBoubd\" />
+  </ItemGroup>
+</Project>

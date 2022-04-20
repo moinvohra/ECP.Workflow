@@ -1,0 +1,3 @@
+[submodule "BuildingBlocks"]
+	path = BuildingBlocks
+	url = git@bitbucket.org:dovetail-ecp/buildingblocks.git

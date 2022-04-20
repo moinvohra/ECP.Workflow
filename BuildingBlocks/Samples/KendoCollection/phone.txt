@@ -1,0 +1,20 @@
+{
+    "skip": 0,
+    "take": 12,
+    "sort": [
+        {
+            "field": "createdDate",
+            "dir": "desc"
+        }
+    ],
+    "filter": {
+        "logic": "or",
+        "filters": [
+            {
+                "field": "phone",
+                "operator": "startswith",
+                "value": "89"
+            } 
+        ]
+    }
+}

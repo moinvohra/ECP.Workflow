@@ -1,0 +1,25 @@
+{
+    "skip": 0,
+    "take": 12,
+    "sort": [
+        {
+            "field": "createdDate",
+            "dir": "desc"
+        }
+    ],
+    "filter": {
+        "logic": "or",
+        "filters": [
+            {
+                "field": "fullName",
+                "operator": "contains",
+                "value": "gaur"
+            },
+                {
+                "field": "fullName",
+                "operator": "contains",
+                "value": "ECP"
+            } 
+        ]
+    }
+}
