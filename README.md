@@ -125,6 +125,3 @@ Specify the version history
 |----------------|-------------------------------|-----------------------------|
 |1.0.0.0|First Version            | -           |
 
-## License
-
-This project is licensed under the Simform Solutions Pvt. Ltd
